@@ -84,7 +84,7 @@ fig = px.bar(df, x="sex", y="total_bill", color='time')
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
-
+server = app.server
 app.layout = html.Div(children=[
     html.H4(children='COVID 2020'),
     dash_table.DataTable(
